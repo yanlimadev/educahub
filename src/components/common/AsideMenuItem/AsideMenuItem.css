@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.aside-menu-item {
+  @apply flex items-center p-3 box-border;
+}
+
+.aside-menu-item:hover {
+  @apply bg-blue-700;
+}
+
+.aside-menu-item.active {
+  @apply w-[244px] bg-blue-700;
+}

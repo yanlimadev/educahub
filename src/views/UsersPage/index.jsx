@@ -1,5 +1,5 @@
-import Aside from "./UsersPageComponents/Aside";
-import UsersPageMain from "./UsersPageComponents/Main";
+import Aside from './UsersPageComponents/Aside';
+import UsersPageMain from './UsersPageComponents/Main';
 // import Main from "../../components/specific/Main";
 // import Header from "./UsersPageComponents/Header";
 // import MainContent from "../../components/specific/MainContent";
@@ -7,7 +7,7 @@ import UsersPageMain from "./UsersPageComponents/Main";
 export default function UsersPage() {
   return (
     <>
-      <Aside key={"Aside"} />
+      <Aside key={'Aside'} />
       <UsersPageMain key="main" />
       {/* <Main key={"Main"}>
         <Header key={"Header"} />

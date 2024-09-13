@@ -1,4 +1,6 @@
-import logo from "../../../assets/images/logo.png";
+import logo from '../../../assets/images/logo.png';
+import P from 'prop-types';
+import defaultPropTypes from '../../../assets/js/defaultPropTypes';
 
 export default function Aside({ children, profile }) {
   return (
@@ -18,3 +20,8 @@ export default function Aside({ children, profile }) {
     </aside>
   );
 }
+
+Aside.propTypes = {
+  ...defaultPropTypes,
+  profile: P.elementType,
+};

@@ -1,16 +1,18 @@
-import MainContent from "../../../../components/specific/MainContent";
-import CoordenadoresSection from "./Coordenadores";
-import EscolasSection from "./Escolas";
-import EstudantesSection from "./Estudantes";
-import GestoresSection from "./Gestores";
-import ProfessoresSection from "./Professores";
+import defaultPropTypes from '../../../../assets/js/defaultPropTypes';
+import MainContent from '../../../../components/specific/MainContent';
+import CoordenadoresSection from './Coordenadores';
+import EscolasSection from './Escolas';
+import EstudantesSection from './Estudantes';
+import GestoresSection from './Gestores';
+import ProfessoresSection from './Professores';
+import P from 'prop-types';
 
 const sections = [
-  ["Estudantes", <EstudantesSection key="Estudantes" />],
-  ["Professores", <ProfessoresSection key="Professores" />],
-  ["Coordenadores", <CoordenadoresSection key="Coordenadores" />],
-  ["Gestores", <GestoresSection key="Gestores" />],
-  ["Escolas", <EscolasSection key="Escolas" />],
+  ['Estudantes', <EstudantesSection key="Estudantes" />],
+  ['Professores', <ProfessoresSection key="Professores" />],
+  ['Coordenadores', <CoordenadoresSection key="Coordenadores" />],
+  ['Gestores', <GestoresSection key="Gestores" />],
+  ['Escolas', <EscolasSection key="Escolas" />],
 ];
 
 export default function Sections({ active }) {
@@ -22,3 +24,8 @@ export default function Sections({ active }) {
     </MainContent>
   );
 }
+
+Sections.propTypes = {
+  ...defaultPropTypes,
+  active: P.string.isRequired,
+};

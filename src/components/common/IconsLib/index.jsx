@@ -1,28 +1,35 @@
+import P from 'prop-types';
+import defaultPropTypes from '../../../assets/js/defaultPropTypes';
+
 export default function Icon({ iconName, className }) {
   switch (iconName) {
-    case "UserIcon":
+    case 'UserIcon':
       return <UserIcon className={className} />;
-    case "PresentationChartLineIcon":
+    case 'PresentationChartLineIcon':
       return <PresentationChartLineIcon className={className} />;
-    case "ClipboardDocumentListIcon":
+    case 'ClipboardDocumentListIcon':
       return <ClipboardDocumentListIcon className={className} />;
-    case "CalendarDaysIcon":
+    case 'CalendarDaysIcon':
       return <CalendarDaysIcon className={className} />;
-    case "AcademicCapIcon":
+    case 'AcademicCapIcon':
       return <AcademicCapIcon className={className} />;
-    case "BookOpenIcon":
+    case 'BookOpenIcon':
       return <BookOpenIcon className={className} />;
-    case "ClipboardDocumentCheckIcon":
+    case 'ClipboardDocumentCheckIcon':
       return <ClipboardDocumentCheckIcon className={className} />;
-    case "BriefcaseIcon":
+    case 'BriefcaseIcon':
       return <BriefcaseIcon className={className} />;
-    case "BuildingLibraryIcon":
+    case 'BuildingLibraryIcon':
       return <BuildingLibraryIcon className={className} />;
     default:
       return <span className="text-red-500">Error</span>;
   }
 }
 
+Icon.propTypes = {
+  iconName: P.string.isRequired,
+  className: P.string,
+};
 export function UserIcon({ className }) {
   return (
     <svg
@@ -42,6 +49,8 @@ export function UserIcon({ className }) {
     </svg>
   );
 }
+
+UserIcon.propTypes = defaultPropTypes;
 
 export function PresentationChartLineIcon({ className }) {
   return (
@@ -63,6 +72,8 @@ export function PresentationChartLineIcon({ className }) {
   );
 }
 
+PresentationChartLineIcon.propTypes = defaultPropTypes;
+
 export function ClipboardDocumentListIcon({ className }) {
   return (
     <svg
@@ -82,6 +93,8 @@ export function ClipboardDocumentListIcon({ className }) {
     </svg>
   );
 }
+
+ClipboardDocumentListIcon.propTypes = defaultPropTypes;
 
 export function CalendarDaysIcon({ className }) {
   return (
@@ -103,6 +116,8 @@ export function CalendarDaysIcon({ className }) {
   );
 }
 
+CalendarDaysIcon.propTypes = defaultPropTypes;
+
 export function AcademicCapIcon({ className }) {
   return (
     <svg
@@ -122,6 +137,8 @@ export function AcademicCapIcon({ className }) {
     </svg>
   );
 }
+
+AcademicCapIcon.propTypes = defaultPropTypes;
 
 export function BookOpenIcon({ className }) {
   return (
@@ -143,6 +160,8 @@ export function BookOpenIcon({ className }) {
   );
 }
 
+BookOpenIcon.propTypes = defaultPropTypes;
+
 export function ClipboardDocumentCheckIcon({ className }) {
   return (
     <svg
@@ -162,6 +181,8 @@ export function ClipboardDocumentCheckIcon({ className }) {
     </svg>
   );
 }
+
+ClipboardDocumentCheckIcon.propTypes = defaultPropTypes;
 
 export function BriefcaseIcon({ className }) {
   return (
@@ -183,6 +204,8 @@ export function BriefcaseIcon({ className }) {
   );
 }
 
+BriefcaseIcon.propTypes = defaultPropTypes;
+
 export function BuildingLibraryIcon({ className }) {
   return (
     <svg
@@ -202,3 +225,5 @@ export function BuildingLibraryIcon({ className }) {
     </svg>
   );
 }
+
+BuildingLibraryIcon.propTypes = defaultPropTypes;

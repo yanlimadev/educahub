@@ -1,3 +1,6 @@
+import defaultPropTypes from '../../../assets/js/defaultPropTypes';
+import P from 'prop-types';
+
 export default function AsideProfile({ name, role }) {
   return (
     <div className="h-32 w-full p-3 flex items-center flex-col">
@@ -7,3 +10,9 @@ export default function AsideProfile({ name, role }) {
     </div>
   );
 }
+
+AsideProfile.propTypes = {
+  ...defaultPropTypes,
+  name: P.string.isRequired,
+  role: P.string.isRequired,
+};

@@ -1,3 +1,5 @@
+import defaultPropTypes from '../../../assets/js/defaultPropTypes';
+
 export default function MainHeader({ children }) {
   return (
     <header className="w-full h-28 shadow-lg no-select">
@@ -5,3 +7,5 @@ export default function MainHeader({ children }) {
     </header>
   );
 }
+
+MainHeader.propTypes = defaultPropTypes;

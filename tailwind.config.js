@@ -2,6 +2,7 @@
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}", // Inclua todos os arquivos na pasta src
+    "./public/index.html",
   ],
   theme: {
     fontFamily: {

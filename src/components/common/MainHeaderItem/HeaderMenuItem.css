@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header-menu-item {
+  @apply w-32 h-28 flex-col flex items-center justify-center ms-6 border-b-4 border-white cursor-pointer;
+}
+
+.header-menu-item:hover {
+  @apply border-blue-700 transition-all;
+}
+
+.header-menu-item.active {
+  @apply box-border border-blue-700;
+}

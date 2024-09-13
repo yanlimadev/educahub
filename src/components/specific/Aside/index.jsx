@@ -1,6 +1,6 @@
 import logo from "../../../assets/images/logo.png";
 
-export default function AsideNavbar({ children, profile }) {
+export default function Aside({ children, profile }) {
   return (
     <aside className="w-60 h-screen bg-blue-600 z-10 no-select">
       {/* Brand */}

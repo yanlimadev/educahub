@@ -1,14 +1,14 @@
-import AsideNavBar from "../../components/specific/AsideNavbar";
-import AsideMenuItem from "../../components/common/AsideMenuItem";
-import AsideProfile from "../../components/specific/AsideProfile";
-import AsideMenu from "../../components/specific/AsideMenu";
-import Icon from "../../components/common/IconsLib";
+import Aside from "../../../../components/specific/Aside";
+import AsideMenuItem from "../../../../components/common/AsideMenuItem";
+import AsideProfile from "../../../../components/specific/AsideProfile";
+import AsideMenu from "../../../../components/specific/AsideMenu";
+import Icon from "../../../../components/common/IconsLib";
 
-export default function AsideNavbar() {
+export default function UsersPageAside() {
   const profile = () => <AsideProfile name={"Yan Guilherme"} role={"admin"} />;
 
   return (
-    <AsideNavBar profile={profile}>
+    <Aside profile={profile}>
       <AsideMenu>
         {/* Usuários */}
         <AsideMenuItem label={"Usuários"} href={"./users"} active={true}>
@@ -36,6 +36,6 @@ export default function AsideNavbar() {
           <Icon iconName="CalendarDaysIcon" className={"size-6 text-white"} />
         </AsideMenuItem>
       </AsideMenu>
-    </AsideNavBar>
+    </Aside>
   );
 }

@@ -12,8 +12,8 @@ export default function Icon({ iconName, className }) {
       return <AcademicCapIcon className={className} />;
     case "BookOpenIcon":
       return <BookOpenIcon className={className} />;
-    case "clipboardDocumentCheckIcon":
-      return <clipboardDocumentCheckIcon className={className} />;
+    case "ClipboardDocumentCheckIcon":
+      return <ClipboardDocumentCheckIcon className={className} />;
     case "BriefcaseIcon":
       return <BriefcaseIcon className={className} />;
     case "BuildingLibraryIcon":
@@ -143,7 +143,7 @@ export function BookOpenIcon({ className }) {
   );
 }
 
-export function clipboardDocumentCheckIcon({ className }) {
+export function ClipboardDocumentCheckIcon({ className }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

@@ -5,7 +5,7 @@ import AsideMenu from '../../../../components/specific/AsideMenu';
 import Icon from '../../../../components/common/IconsLib';
 
 export default function UsersPageAside() {
-  const profile = () => <AsideProfile name={'Yan Guilherme'} role={'admin'} />;
+  const profile = <AsideProfile name={'Yan Guilherme'} role={'admin'} />;
 
   return (
     <Aside profile={profile}>

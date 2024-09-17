@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.student-card {
+  @apply w-72 h-28 shadow-lg flex flex-row items-center justify-center rounded-lg;
+}
+
+.profile-image {
+  @apply w-16 h-16 rounded-full bg-blue-200;
+}
+
+.status-ball {
+  @apply h-2.5 w-2.5 rounded-full bg-gray-500;
+
+  &.inativo {
+    @apply bg-red-500;
+  }
+
+  &.ativo {
+    @apply bg-green-500;
+  }
+
+  &.concluido {
+    @apply bg-blue-500;
+  }
+}
+
+.student-card-text {
+  @apply flex flex-col w-44 me-4;
+
+  & h1,
+  h2,
+  h3 {
+    @apply whitespace-nowrap text-ellipsis overflow-hidden;
+  }
+
+  & h1 {
+    @apply text-base font-semibold;
+  }
+
+  & h2 {
+    @apply text-xs;
+  }
+
+  & h3 {
+    @apply ms-2 text-xs text-gray-400;
+  }
+
+  & .indicator {
+    @apply flex flex-row items-center;
+  }
+}

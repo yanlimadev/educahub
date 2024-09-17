@@ -1,4 +1,5 @@
-import P from 'prop-types';
+import { useContext } from 'react';
+import { TabContext } from '../../UsersPageContexts/TabContext';
 import MainHeader from '../../../../components/specific/MainHeader';
 import Icon from '../../../../components/common/IconsLib';
 import MainHeaderItem from '../../../../components/common/MainHeaderItem';
@@ -11,11 +12,13 @@ let items = [
   ['Escolas', 'BuildingLibraryIcon', 'size-6 text-blue-700'],
 ];
 
-export default function Header({ active, setActive }) {
+export default function Header() {
+  const { state, setActive } = useContext(TabContext);
+
   return (
     <MainHeader>
       {items.map((item) => {
-        let isActiveItem = item[0] === active ? true : false;
+        let isActiveItem = item[0] === state.activeTab ? true : false;
 
         return (
           <MainHeaderItem
@@ -33,8 +36,3 @@ export default function Header({ active, setActive }) {
     </MainHeader>
   );
 }
-
-Header.propTypes = {
-  active: P.string.isRequired,
-  setActive: P.func.isRequired,
-};

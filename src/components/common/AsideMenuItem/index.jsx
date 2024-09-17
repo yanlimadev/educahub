@@ -1,5 +1,6 @@
 import P from 'prop-types';
 import './AsideMenuItem.css';
+import defaultPropTypes from '../../../assets/js/defaultPropTypes';
 
 export default function AsideMenuItem({ children, label, href, active }) {
   return (
@@ -13,8 +14,7 @@ export default function AsideMenuItem({ children, label, href, active }) {
 }
 
 AsideMenuItem.propTypes = {
-  children: P.elementType,
-  label: P.string,
+  ...defaultPropTypes,
   href: P.string,
   active: P.bool,
 };

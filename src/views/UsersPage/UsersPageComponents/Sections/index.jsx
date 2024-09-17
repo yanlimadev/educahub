@@ -1,11 +1,11 @@
-import defaultPropTypes from '../../../../assets/js/defaultPropTypes';
 import MainContent from '../../../../components/specific/MainContent';
+import { TabContext } from '../../UsersPageContexts/TabContext';
+import { useContext } from 'react';
 import CoordenadoresSection from './Coordenadores';
 import EscolasSection from './Escolas';
 import EstudantesSection from './Estudantes';
 import GestoresSection from './Gestores';
 import ProfessoresSection from './Professores';
-import P from 'prop-types';
 
 const sections = [
   ['Estudantes', <EstudantesSection key="Estudantes" />],
@@ -15,17 +15,14 @@ const sections = [
   ['Escolas', <EscolasSection key="Escolas" />],
 ];
 
-export default function Sections({ active }) {
+export default function Sections() {
+  const { state } = useContext(TabContext);
+
   return (
     <MainContent>
       {sections.map((section) => {
-        return section[0] === active ? section[1] : null;
+        return section[0] === state.activeTab ? section[1] : null;
       })}
     </MainContent>
   );
 }
-
-Sections.propTypes = {
-  ...defaultPropTypes,
-  active: P.string.isRequired,
-};

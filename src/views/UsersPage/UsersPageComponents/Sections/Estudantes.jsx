@@ -1,7 +1,12 @@
-import defaultPropTypes from '../../../../assets/js/defaultPropTypes';
-import MainContentItem from '../../../../components/common/MainContentItem';
-export default function EstudantesSection({ className }) {
-  return <MainContentItem className={className}>Estudantes</MainContentItem>;
-}
+import SearchBar from '../../../../components/common/SearchBar';
+import SearchContextProvider from '../../UsersPageContexts/SearchContext';
+import EstudantesMainContentItem from './Estudantes/EstudantesMainContentItem';
 
-EstudantesSection.propTypes = defaultPropTypes;
+export default function EstudantesSection() {
+  return (
+    <SearchContextProvider>
+      <SearchBar></SearchBar>
+      <EstudantesMainContentItem />
+    </SearchContextProvider>
+  );
+}

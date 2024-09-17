@@ -12,7 +12,7 @@ export default function Aside({ children, profile }) {
 
       {/* Profile */}
       <hr />
-      {profile()}
+      {profile}
       <hr />
 
       {/* Links */}
@@ -23,5 +23,5 @@ export default function Aside({ children, profile }) {
 
 Aside.propTypes = {
   ...defaultPropTypes,
-  profile: P.elementType,
+  profile: P.object,
 };

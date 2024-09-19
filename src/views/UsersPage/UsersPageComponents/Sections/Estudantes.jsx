@@ -1,11 +1,11 @@
-import SearchBar from '../../../../components/common/SearchBar';
 import SearchContextProvider from '../../UsersPageContexts/SearchContext';
 import EstudantesMainContentItem from './Estudantes/EstudantesMainContentItem';
+import EstudantesSearchBar from './Estudantes/EstudantesMainContentSearchBar';
 
 export default function EstudantesSection() {
   return (
     <SearchContextProvider>
-      <SearchBar></SearchBar>
+      <EstudantesSearchBar />
       <EstudantesMainContentItem />
     </SearchContextProvider>
   );
